@@ -26,20 +26,15 @@
 let testCase = ["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"]
 
 function points(games) {
-    let total = 0
-    games.forEach(game => {
-        const [x,y] = game.split(':').map(Number)
-
-        if (x > y){
-            total += 3
-        }else if (x < y){
-            total += 0
-        }else{
-            total += 1
-        }
-    })
-
-    return total
+    let total = 0;
+    games.map(game => {
+      if (game[0] === game[2]) {
+        total += 1;
+      } else if (game[0] > game[2]) {
+        total += 3;
+      }
+    });
+    return total;
 }
 
 console.log(points(testCase)) // 30
