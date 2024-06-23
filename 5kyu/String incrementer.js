@@ -40,3 +40,13 @@ console.log(incrementString('foo')) //foo1
 
 // Code Fights explains the solution in this video:
 // https://www.youtube.com/watch?v=DAIZ-0y2F8I
+
+
+// Alt Solution (Codewars user: TheodoreChe)
+// --------------------------------------
+const incrementString = s => s.replace(/[0-8]?9*$/, m => String(++m));
+
+console.log(incrementString('foobar000')) //foobar001
+console.log(incrementString('foobar999')) //foobar1000
+console.log(incrementString('foobar00999')) //foobar01000
+console.log(incrementString('foo')) //foo1
