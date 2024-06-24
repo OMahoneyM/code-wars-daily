@@ -1,4 +1,4 @@
-# Code Wars Daily Challenges
+# Codewars Daily Challenges
 
 A repository to organize my Code Wars solutions.
 <br>
