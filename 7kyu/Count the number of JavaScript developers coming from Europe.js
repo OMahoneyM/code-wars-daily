@@ -44,3 +44,10 @@ const list1 = [
   ];
 
  console.log(countDevelopers(list1)); 
+
+
+// Alt Solution:
+// --------------------------------------
+function countDevelopers(list) {
+    return list.filter(x => x.continent == 'Europe' && x.language == 'JavaScript').length
+}
