@@ -69,7 +69,6 @@ console.log(rot13('test')) //grfg
 console.log(rot13('Test')) //Trfg
 
 
-
 // Clever Solution:
 // --------------------------------------
 function rot13(message) {
