@@ -12,7 +12,7 @@
 // Solution:
 // --------------------------------------
 function toFreud(s){
-    return (s.length < 1) ? s : s.split(' ').map(e => e = "sex").join(' ')
+    return (s.length < 1) ? s : s.split(' ').map(e => e = "sex").join(' ');
 }
 
 console.log(toFreud(""), "")
