@@ -36,13 +36,28 @@ var list3 = [
 // --------------------------------------
 function getFirstPython(arr){
 
-    for(let i = 0; i < arr.length; i++){
-        if (arr[i].language === "Python") {
-            return `${arr[i].firstName}, ${arr[i].country}`
-        }
-    }
+    return arr.find(e => e.language === "Python")
+    // for(let i = 0; i < arr.length; i++){
+    //     if (arr[i].language === "Python") {
+    //         return `${arr[i].firstName}, ${arr[i].country}`
+    //     }
+    // }
 
-    return "There will be no Python developers"
+    // return "There will be no Python developers"
+}
+
+console.log(getFirstPython(list1), "Victoria, Puerto Rico")
+console.log(getFirstPython(list2), "There will be no Python developers")
+console.log(getFirstPython(list3), "Victoria, Puerto Rico")
+
+
+
+// Alt Solution:
+// --------------------------------------
+function getFirstPython(arr){
+    const dev = arr.find(e => e.language === "Python")
+
+    return dev ? `${dev.firstName}, ${dev.country}` : "There will be no Python developers"
 }
 
 console.log(getFirstPython(list1), "Victoria, Puerto Rico")
